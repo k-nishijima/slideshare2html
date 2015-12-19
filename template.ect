@@ -1,0 +1,15 @@
+<% if @items?.length : %>
+<table class="table">
+<tbody>
+    <% for item in @items : %>
+    <tr>
+    <td nowrap><%= item.date %></td>
+    <td><a href="<%= item.link %>" target="_blank"><%= item.title %><br>
+      <%- item.desc %></a><br>
+      <%= item.author %>
+    </td>
+    </tr>
+    <% end %>
+</tbody>
+</table>
+<% end %>
